@@ -12,7 +12,7 @@ fi
 if [ ! -d /workdir/meta-clang ]; then
   git clone https://github.com/kraj/meta-clang -b kirkstone
 fi
-if [ ! -f /workdir/meta-flutter ]; then
+if [ ! -d /workdir/meta-flutter ]; then
   git clone https://github.com/sony/meta-flutter.git
 fi
 

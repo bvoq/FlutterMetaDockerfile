@@ -3,16 +3,35 @@ MAINTAINER Kevin De Keyser§<kevin.dekeyser@zuehlke.com>
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Installing yocto requirements for Ubuntu: https://docs.yoctoproject.org/1.8/yocto-project-qs/yocto-project-qs.html#ubuntu
+ARG BUILDPLATFORM
+ARG BUILDARCH
+ARG BUILDOS
+ARG BUILDVARIANT
+ARG TARGETPLATFORM
+ARG TARGETARCH
+ARG TARGETOS
+ARG TARGETVARIANT
+RUN echo "Building on platform $BUILDPLATFORM  with architecture $BUILDARCH and OS $BUILDOS and variant $BUILDVARIANT."
+RUN echo "Targetting platform $TARGETPLATFORM with architecture $TARGETARCH and OS $TARGETOS and variant $TARGETVARIANT."
+
+
 RUN apt-get -y update
 RUN apt-get -y upgrade
 RUN apt-get install -y ca-certificates
-RUN apt-get -y install gawk wget git-core diffstat unzip texinfo gcc-multilib \
+# Installing yocto requirements for Ubuntu except for gcc-multilib: https://docs.yoctoproject.org/1.8/yocto-project-qs/yocto-project-qs.html#ubuntu
+RUN apt-get -y install gawk wget git-core diffstat unzip texinfo  \
      build-essential chrpath socat libsdl1.2-dev xterm
+
+# If architecture is arm64 (multilib does not support arm64).
+RUN if [ "$TARGETARCH" = "arm64" ] ; then apt-get -y install gcc-11 g++-11 ; else apt-get -y install gcc-multilib ; fi
 # Installing flutter-meta dependencies
 RUN apt-get -y upgrade && apt-get -y install lz4
 # Unmentioned dependencies
 RUN apt-get -y upgrade && apt-get -y install cpio file zstd
+
+# extras
+# RUN apt-get -y upgrade && apt-get -y install gawk wget git-core diffstat unzip texinfo build-essential chrpath socat cpio python3 python3-pip python3-pexpect python-is-python3 python3-git python3-jinja2 xz-utils debianutils iputils-ping libegl1-mesa libsdl1.2-dev xterm curl
+
 
 CMD ["bash"]
 RUN apt-get install -y curl dosfstools mtools parted syslinux tree zip # buildkit

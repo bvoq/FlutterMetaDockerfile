@@ -11,15 +11,17 @@ RUN apt-get -y install gawk wget git-core diffstat unzip texinfo gcc-multilib \
      build-essential chrpath socat libsdl1.2-dev xterm
 # Installing flutter-meta dependencies
 RUN apt-get -y upgrade && apt-get -y install lz4
+# Unmentioned dependencies
+RUN apt-get -y upgrade && apt-get -y install cpio file zstd
 
 CMD ["bash"]
-RUN /bin/sh -c apt-get install -y curl dosfstools mtools parted syslinux tree zip # buildkit
-RUN /bin/sh -c curl http://storage.googleapis.com/git-repo-downloads/repo > /usr/local/bin/repo # buildkit
-RUN /bin/sh -c chmod a+x /usr/local/bin/repo # buildkit
-RUN /bin/sh -c id jenkins 2>/dev/null || useradd --uid 1000 --create-home jenkins # buildkit
-RUN /bin/sh -c id build 2>/dev/null || useradd --uid 30000 --create-home build # buildkit
-RUN /bin/sh -c apt-get install -y sudo # buildkit
-RUN /bin/sh -c echo "build ALL=(ALL) NOPASSWD: ALL" | tee -a /etc/sudoers # buildkit
+RUN apt-get install -y curl dosfstools mtools parted syslinux tree zip # buildkit
+RUN curl http://storage.googleapis.com/git-repo-downloads/repo > /usr/local/bin/repo # buildkit
+RUN chmod a+x /usr/local/bin/repo # buildkit
+RUN id jenkins 2>/dev/null || useradd --uid 1000 --create-home jenkins # buildkit
+RUN id build 2>/dev/null || useradd --uid 30000 --create-home build # buildkit
+RUN apt-get install -y sudo # buildkit
+RUN echo "build ALL=(ALL) NOPASSWD: ALL" | tee -a /etc/sudoers # buildkit
 
 
 # Install repo

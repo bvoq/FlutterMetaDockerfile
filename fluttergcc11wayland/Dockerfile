@@ -13,12 +13,12 @@ RUN apt-get -y install gawk wget git-core diffstat unzip texinfo gcc-multilib \
 RUN apt-get -y upgrade && apt-get -y install lz4
 
 # Install repo
-RUN curl http://storage.googleapis.com/git-repo-downloads/repo > /usr/local/bin/repo # buildkit
-RUN chmod a+x /usr/local/bin/repo # buildkit
-RUN id jenkins 2>/dev/null || useradd --uid 1000 --create-home jenkins # buildkit
-RUN id build 2>/dev/null || useradd --uid 30000 --create-home build # buildkit
-RUN apt-get install -y sudo # buildkit
-RUN echo "build ALL=(ALL) NOPASSWD: ALL" | tee -a /etc/sudoers # buildkit
+RUN curl http://storage.googleapis.com/git-repo-downloads/repo > /usr/local/bin/repo
+RUN chmod a+x /usr/local/bin/repo
+RUN id jenkins 2>/dev/null || useradd --uid 1000 --create-home jenkins
+RUN id build 2>/dev/null || useradd --uid 30000 --create-home build
+RUN apt-get install -y sudo
+RUN echo "build ALL=(ALL) NOPASSWD: ALL" | tee -a /etc/sudoers 
 
 
 # Set up locales
@@ -42,4 +42,3 @@ RUN apt-get clean # && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 USER build
 WORKDIR /home/build
 COPY wayland.sh /home/build/wayland.sh
-WORKDIR /wayland

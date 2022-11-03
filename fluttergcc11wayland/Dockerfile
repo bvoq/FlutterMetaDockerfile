@@ -12,6 +12,15 @@ RUN apt-get -y install gawk wget git-core diffstat unzip texinfo gcc-multilib \
 # Installing flutter-meta dependencies
 RUN apt-get -y upgrade && apt-get -y install lz4
 
+# Install repo
+RUN curl http://storage.googleapis.com/git-repo-downloads/repo > /usr/local/bin/repo # buildkit
+RUN chmod a+x /usr/local/bin/repo # buildkit
+RUN id jenkins 2>/dev/null || useradd --uid 1000 --create-home jenkins # buildkit
+RUN id build 2>/dev/null || useradd --uid 30000 --create-home build # buildkit
+RUN apt-get install -y sudo # buildkit
+RUN echo "build ALL=(ALL) NOPASSWD: ALL" | tee -a /etc/sudoers # buildkit
+
+
 # Set up locales
 RUN apt-get -y install locales apt-utils sudo && dpkg-reconfigure locales && locale-gen en_US.UTF-8 && update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && echo 'LANG="en_US.UTF-8"'>/etc/default/locale && dpkg-reconfigure --frontend=noninteractive locales && update-locale LANG=en_US.UTF-8 # buildkit

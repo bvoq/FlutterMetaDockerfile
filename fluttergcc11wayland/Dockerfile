@@ -12,13 +12,23 @@ RUN apt-get -y install gawk wget git-core diffstat unzip texinfo gcc-multilib \
 # Installing flutter-meta dependencies
 RUN apt-get -y upgrade && apt-get -y install lz4
 
+CMD ["bash"]
+RUN /bin/sh -c apt-get install -y curl dosfstools mtools parted syslinux tree zip # buildkit
+RUN /bin/sh -c curl http://storage.googleapis.com/git-repo-downloads/repo > /usr/local/bin/repo # buildkit
+RUN /bin/sh -c chmod a+x /usr/local/bin/repo # buildkit
+RUN /bin/sh -c id jenkins 2>/dev/null || useradd --uid 1000 --create-home jenkins # buildkit
+RUN /bin/sh -c id build 2>/dev/null || useradd --uid 30000 --create-home build # buildkit
+RUN /bin/sh -c apt-get install -y sudo # buildkit
+RUN /bin/sh -c echo "build ALL=(ALL) NOPASSWD: ALL" | tee -a /etc/sudoers # buildkit
+
+
 # Install repo
-RUN curl http://storage.googleapis.com/git-repo-downloads/repo > /usr/local/bin/repo
-RUN chmod a+x /usr/local/bin/repo
-RUN id jenkins 2>/dev/null || useradd --uid 1000 --create-home jenkins
-RUN id build 2>/dev/null || useradd --uid 30000 --create-home build
-RUN apt-get install -y sudo
-RUN echo "build ALL=(ALL) NOPASSWD: ALL" | tee -a /etc/sudoers 
+# RUN curl http://storage.googleapis.com/git-repo-downloads/repo > /usr/local/bin/repo
+# RUN chmod a+x /usr/local/bin/repo
+# RUN id jenkins 2>/dev/null || useradd --uid 1000 --create-home jenkins
+# RUN id build 2>/dev/null || useradd --uid 30000 --create-home build
+# RUN apt-get install -y sudo
+# RUN echo "build ALL=(ALL) NOPASSWD: ALL" | tee -a /etc/sudoers 
 
 
 # Set up locales

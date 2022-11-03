@@ -23,13 +23,14 @@ RUN apt-get -y install gawk wget git-core diffstat unzip texinfo  \
      build-essential chrpath socat libsdl1.2-dev xterm
 
 # If architecture is arm64 (multilib does not support arm64).
-RUN if [ "$TARGETARCH" = "arm64" ] ; then apt-get -y install gcc-11 g++-11 ; else apt-get -y install gcc-multilib ; fi
+# RUN if [ "$TARGETARCH" = "arm64" ] ; then apt-get -y install gcc-11 g++-11 ; else apt-get -y install gcc-multilib ; fi
+RUN apt-get -y install gcc-multilib
 # Installing flutter-meta dependencies
 RUN apt-get -y upgrade && apt-get -y install lz4
 # Unmentioned dependencies
 RUN apt-get -y upgrade && apt-get -y install cpio file zstd
 
-# extras
+# extras, not needed
 # RUN apt-get -y upgrade && apt-get -y install gawk wget git-core diffstat unzip texinfo build-essential chrpath socat cpio python3 python3-pip python3-pexpect python-is-python3 python3-git python3-jinja2 xz-utils debianutils iputils-ping libegl1-mesa libsdl1.2-dev xterm curl
 
 

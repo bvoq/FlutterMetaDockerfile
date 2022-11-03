@@ -34,7 +34,7 @@ RUN apt-get -y upgrade && apt-get -y install cpio file zstd
 
 
 CMD ["bash"]
-RUN apt-get install -y curl dosfstools mtools parted syslinux tree zip # buildkit
+RUN apt-get install -y curl dosfstools mtools parted tree zip # buildkit
 RUN curl http://storage.googleapis.com/git-repo-downloads/repo > /usr/local/bin/repo # buildkit
 RUN chmod a+x /usr/local/bin/repo # buildkit
 RUN id jenkins 2>/dev/null || useradd --uid 1000 --create-home jenkins # buildkit

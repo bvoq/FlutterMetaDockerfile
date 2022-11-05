@@ -21,7 +21,7 @@ if [ ! -d /workdir/meta-rasperrypi ]; then
 fi
 
 if [ ! -d /workdir/meta-openembedded ]; then
-  git clone git://git.yoctoproject.org/meta-openembedded.git -b kirkstone
+  git clone git://git.openembedded.org/meta-openembedded -b kirkstone
 fi
 
 rm -rf /workdir/build
@@ -29,11 +29,17 @@ source /workdir/poky/oe-init-build-env /workdir/build
 echo 'MACHINE ?= "raspberrypi3"' >> /workdir/build/conf/local.conf
 echo 'INHERIT += "rm_work"' >> /workdir/build/conf/local.conf # save space
 echo 'IMAGE_FSTYPES = "tar.xz ext3 rpi-sdimg"' >> /workdir/build/conf/local.conf # get SD card image
-echo 'ENABLE\_UART = "1"' >> /workdir/build/conf/local.conf # more rasperrypi settings.
+echo 'ENABLE_UART = "1"' >> /workdir/build/conf/local.conf # more rasperrypi settings.
 echo 'EXTRA_IMAGE_FEATURES ?= "debug-tweaks"' >> /workdir/build/conf/local.conf # configure a root user for testing, remove for production.
+
 #RUN echo 'CLANGSDK = "1"' >> /home/yocto/build/conf/local.conf
 cd /workdir/build
-# MACHINE=qemuarm64 bitbake-layers add-layer ../meta-clang/
-# MACHINE=qemuarm64 bitbake-layers add-layer ../meta-flutter/
-# MACHINE=qemuarm64 bitbake flutter-wayland-client
+bitbake-layers add-layer ../meta-clang/
+bitbake-layers add-layer ../meta-flutter/
+bitbake-layers add-layer ../meta-openembedded/meta-oe/
+bitbake-layers add-layer ../meta-openembedded/meta-python/
+bitbake-layers add-layer ../meta-openembedded/meta-multimedia/
+bitbake-layers add-layer ../meta-openembedded/meta-networking/
+bitbake-layers add-layer ../meta-raspberrypi/
+bitbake flutter-wayland-client
 

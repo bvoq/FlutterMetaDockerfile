@@ -30,7 +30,7 @@ echo 'MACHINE ?= "raspberrypi3"' >> /workdir/build/conf/local.conf
 echo 'INHERIT += "rm_work"' >> /workdir/build/conf/local.conf # save space
 echo 'IMAGE_FSTYPES = "tar.xz ext3 rpi-sdimg"' >> /workdir/build/conf/local.conf # get SD card image
 echo 'ENABLE\_UART = "1"' >> /workdir/build/conf/local.conf # more rasperrypi settings.
-echo 'EXTRA_IMAGE_FEATURES ?= "debug-tweaks"' >> /workdir/build/conf/local.conf # configure a root user for testing.
+echo 'EXTRA_IMAGE_FEATURES ?= "debug-tweaks"' >> /workdir/build/conf/local.conf # configure a root user for testing, remove for production.
 #RUN echo 'CLANGSDK = "1"' >> /home/yocto/build/conf/local.conf
 cd /workdir/build
 # MACHINE=qemuarm64 bitbake-layers add-layer ../meta-clang/

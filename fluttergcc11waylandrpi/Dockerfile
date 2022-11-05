@@ -73,4 +73,4 @@ RUN apt-get clean # && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 USER build
 WORKDIR /home/build
-COPY wayland.sh /home/build/wayland.sh
+COPY wayland_rpi3.sh /home/build/wayland_rpi3.sh

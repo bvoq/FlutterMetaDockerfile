@@ -16,7 +16,7 @@ if [ ! -d /workdir/meta-flutter ]; then
   git clone https://github.com/sony/meta-flutter.git
 fi
 
-rm -rf /workdir/build
+#rm -rf /workdir/build
 source /workdir/poky/oe-init-build-env /workdir/build
 echo 'MACHINE ?= "qemuarm64"' >> /workdir/build/conf/local.conf
 echo 'DISTRO_FEATURES:append = " systemd"' >> /workdir/build/conf/local.conf

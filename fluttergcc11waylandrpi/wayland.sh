@@ -16,13 +16,12 @@ if [ ! -d /workdir/meta-flutter ]; then
   git clone https://github.com/sony/meta-flutter.git
 fi
 
-#rm -rf /workdir/build
+rm -rf /workdir/build
 source /workdir/poky/oe-init-build-env /workdir/build
 echo 'MACHINE ?= "qemuarm64"' >> /workdir/build/conf/local.conf
-echo 'DISTRO_FEATURES:append = " systemd"' >> /workdir/build/conf/local.conf
 #RUN echo 'CLANGSDK = "1"' >> /home/yocto/build/conf/local.conf
 cd /workdir/build
 MACHINE=qemuarm64 bitbake-layers add-layer ../meta-clang/
 MACHINE=qemuarm64 bitbake-layers add-layer ../meta-flutter/
-MACHINE=qemuarm64 bitbake flutter-drm-gbm-backend
+MACHINE=qemuarm64 bitbake flutter-wayland-client
 

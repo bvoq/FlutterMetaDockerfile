@@ -26,6 +26,7 @@ bitbake-layers add-layer ../meta-flutter/
 bitbake core-image-weston -c populate_sdk
 #./tmp/deploy/sdk/poky-glibc-x86_64-core-image-weston-aarch64-qemuarm64-toolchain-3.1.7.sh
 echo /workdir/poky2 | ./tmp/deploy/sdk/poky-glibc-x86_64-core-image-weston-cortexa57-qemuarm64-toolchain-4.0.4.sh
+
 source /workdir/poky2/environment-setup-cortexa57-poky-linux
 export CC=${CLANGCC}
 export CXX=${CLANGCXX}

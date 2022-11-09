@@ -23,7 +23,7 @@ RUN apt-get -y install gawk wget git-core diffstat unzip texinfo  \
      build-essential chrpath socat libsdl1.2-dev xterm
 
 # If architecture is arm64 (multilib does not support arm64).
-RUN if [ "$TARGETARCH" = "arm64" ] ; then apt-get -y install gcc-11 g++11 libc6 libc6-dev libc6-arm64-cross libc6-dev-arm64-cross libc6-amd64-cross libc6-amd64-i386-cross libc6-dev-amd64-i386-cross ; else apt-get -y install gcc-multilib ; fi
+RUN if [[ "$TARGETARCH" == "arm64" ]] ; then apt-get -y install gcc-11 g++11 libc6 libc6-dev libc6-arm64-cross libc6-dev-arm64-cross libc6-amd64-cross libc6-amd64-i386-cross libc6-dev-amd64-i386-cross ; else apt-get -y install gcc-multilib ; fi
 # Installing flutter-meta dependencies
 RUN apt-get -y upgrade && apt-get -y install lz4
 # Unmentioned dependencies

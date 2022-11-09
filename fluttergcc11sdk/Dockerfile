@@ -46,4 +46,5 @@ RUN apt install -y gcc-11 g++-11
 
 USER build
 WORKDIR /home/build
-COPY sdk.sh /home/build/sdk.sh
+COPY step1_buildsdk.sh /home/build/step1_buildsdk.sh
+COPY step2_buildelinuxflutter.sh /home/build/step2_buildelinuxflutter.sh

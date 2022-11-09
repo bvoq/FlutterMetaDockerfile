@@ -19,9 +19,9 @@ dart "$FLUTTER_DIR/cache/dart-sdk/bin/snapshots/frontend_server.dart.snapshot" -
 cd ..
 
 
-docker build -t flutterrpiofficial .
-docker volume create --name flutterrpiofficialvolume # -o size=1G
-#docker run -it --storage-opt size=100G fluttergcc11wayland
-docker run -it --rm -v flutterpiofficialvolume:/workdir flutterpiofficial sudo chown -R build:build /workdir
-docker run -it -v flutterpiofficialvolume:/workdir flutterpiofficial /home/build/build_gen.sh
-docker run -it -v flutterpiofficialvolume:/workdir flutterpiofficial /bin/bash
+#docker build -t flutterrpiofficial .
+#docker volume create --name flutterrpiofficialvolume # -o size=1G
+##docker run -it --storage-opt size=100G fluttergcc11wayland
+#docker run -it --rm -v flutterpiofficialvolume:/workdir flutterpiofficial sudo chown -R build:build /workdir
+#docker run -it -v flutterpiofficialvolume:/workdir flutterpiofficial /home/build/build_gen.sh
+#docker run -it -v flutterpiofficialvolume:/workdir flutterpiofficial /bin/bash

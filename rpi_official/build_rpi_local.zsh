@@ -1,5 +1,6 @@
 #!/bin/zsh
 # Note has to be run with zsh
+# Also first run 
 
 # Compiling app
 git clone https://github.com/flutter/gallery.git flutter_gallery
@@ -14,11 +15,17 @@ flutter build bundle
 FLUTTER_DIR="${$(which flutter)%/*}"
 echo "Make sure this is the path to the flutter folder $FLUTTER_DIR"
 
+# currently compatible with 3.3.7
+
+# Make sure SDK matches: https://github.com/ardera/flutter-engine-binaries-for-arm
+# Fast issue speed: https://github.com/ardera/flutter-engine-binaries-for-arm/issues/14
+# cd "$FLUTTER_DIR" ; git checkout 3.3.7 ; 
+
 # For Flutter < 3.3.0 
 # dart ${$(which flutter)%/*}/cache/dart-sdk/bin/snapshots/frontend_server.dart.snapshot --sdk-root ${$(which flutter)%/*}/cache/artifacts/engine/common/flutter_patched_sdk_product --target=flutter --aot --tfa -Ddart.vm.product=true --packages .dart_tool/.package --output-dill build/kernel_snapshot.dill --verbose --depfile build/kernel_snapshot.d lib/main.dart
 # For Flutter > 3.3.0 
 dart "$FLUTTER_DIR/cache/dart-sdk/bin/snapshots/frontend_server.dart.snapshot" --sdk-root "$FLUTTER_DIR/cache/artifacts/engine/common/flutter_patched_sdk_product" --target=flutter --aot --tfa -Ddart.vm.product=true --packages .dart_tool/package_config.json --output-dill build/kernel_snapshot.dill --verbose --depfile build/kernel_snapshot.d lib/main.dart
-cp -r build ../build2
+cp -r build/flutter_assets ../build2
 cd ..
 
 

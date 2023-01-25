@@ -10,6 +10,7 @@ docker build -t fluttergcc11sdk .
 docker run -it -v fluttergcc11sdkvolume:/workdir fluttergcc11sdk /home/build/buildelinuxflutter.sh
 # copy result back
 docker container create --name dummycopycontainer -v fluttergcc11sdkvolume:/workdir hello-world
+rm -r build
 docker cp dummycopycontainer:/workdir/myproj/build build
 docker rm dummycopycontainer
 

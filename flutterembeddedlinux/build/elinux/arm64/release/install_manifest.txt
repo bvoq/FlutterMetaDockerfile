@@ -6,6 +6,10 @@
 /workdir/myproj/build/elinux/arm64/release/bundle/data/flutter_assets/shaders/ink_sparkle.frag
 /workdir/myproj/build/elinux/arm64/release/bundle/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
 /workdir/myproj/build/elinux/arm64/release/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+/workdir/myproj/build/elinux/arm64/release/bundle/data/flutter_assets/assets/fonts/zuehlke/AAZuehlkeMedIta.ttf
+/workdir/myproj/build/elinux/arm64/release/bundle/data/flutter_assets/assets/fonts/zuehlke/AAZuehlkeIta.ttf
+/workdir/myproj/build/elinux/arm64/release/bundle/data/flutter_assets/assets/fonts/zuehlke/AAZuehlkeMed.ttf
+/workdir/myproj/build/elinux/arm64/release/bundle/data/flutter_assets/assets/fonts/zuehlke/AAZuehlke.ttf
 /workdir/myproj/build/elinux/arm64/release/bundle/data/flutter_assets/NOTICES.Z
 /workdir/myproj/build/elinux/arm64/release/bundle/data/flutter_assets/FontManifest.json
 /workdir/myproj/build/elinux/arm64/release/bundle/lib/libapp.so

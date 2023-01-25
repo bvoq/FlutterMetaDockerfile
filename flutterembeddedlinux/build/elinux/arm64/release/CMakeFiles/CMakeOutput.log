@@ -1,0 +1,171 @@
+The target system is: Linux -  - cortexa57
+The host system is: Linux - 5.15.49-linuxkit - x86_64
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/bin/clang++ 
+Build flags: ;-O2;-pipe;-g;-feliminate-unused-debug-types;
+Id flags: -c;--target=aarch64-poky-linux 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+
+The CXX compiler identification is Clang, found in "/workdir/myproj/build/elinux/arm64/release/CMakeFiles/3.22.3/CompilerIdCXX/CMakeCXXCompilerId.o"
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /workdir/myproj/build/elinux/arm64/release/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_4a8d7/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4a8d7.dir/build.make CMakeFiles/cmTC_4a8d7.dir/build
+gmake[1]: Entering directory '/workdir/myproj/build/elinux/arm64/release/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_4a8d7.dir/CMakeCXXCompilerABI.cpp.o
+/workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/bin/clang++ --target=aarch64-poky-linux --sysroot=/workdir/poky2/sysroots/cortexa57-poky-linux   -O2 -pipe -g -feliminate-unused-debug-types     -v -MD -MT CMakeFiles/cmTC_4a8d7.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_4a8d7.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_4a8d7.dir/CMakeCXXCompilerABI.cpp.o -c /workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp
+clang version 14.0.3 (https://github.com/llvm/llvm-project 1f9140064dfbfb0bbda8e51306ea51080b2f7aac)
+Target: aarch64-poky-linux
+Thread model: posix
+InstalledDir: /workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/bin
+Found candidate GCC installation: /workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0
+Selected GCC installation: /workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ (in-process)
+ "/workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/bin/clang-14" -cc1 -triple aarch64-poky-linux -emit-obj --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu generic -target-feature +neon -target-feature +v8a -target-abi aapcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=constructor -dwarf-version=5 -debugger-tuning=gdb -v -fcoverage-compilation-dir=/workdir/myproj/build/elinux/arm64/release/CMakeFiles/CMakeTmp -resource-dir /workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/lib/clang/14.0.3 -dependency-file CMakeFiles/cmTC_4a8d7.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_4a8d7.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /workdir/poky2/sysroots/cortexa57-poky-linux -internal-isystem /workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/../../../include/c++/11.3.0 -internal-isystem /workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/../../../include/c++/11.3.0/aarch64-poky-linux -internal-isystem /workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/../../../include/c++/11.3.0/backward -internal-isystem /workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/lib/clang/14.0.3/include -internal-isystem /workdir/poky2/sysroots/cortexa57-poky-linux/usr/local/include -internal-isystem /workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/../../../aarch64-poky-linux/include -internal-externc-isystem /workdir/poky2/sysroots/cortexa57-poky-linux/include -internal-externc-isystem /workdir/poky2/sysroots/cortexa57-poky-linux/usr/include -O2 -fdeprecated-macro -fdebug-compilation-dir=/workdir/myproj/build/elinux/arm64/release/CMakeFiles/CMakeTmp -ferror-limit 19 -fno-signed-char -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -target-feature +outline-atomics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_4a8d7.dir/CMakeCXXCompilerABI.cpp.o -x c++ /workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp
+clang -cc1 version 14.0.3 based upon LLVM 14.0.3 default target x86_64-unknown-linux-gnu
+ignoring nonexistent directory "/workdir/poky2/sysroots/cortexa57-poky-linux/usr/local/include"
+ignoring nonexistent directory "/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/../../../aarch64-poky-linux/include"
+ignoring nonexistent directory "/workdir/poky2/sysroots/cortexa57-poky-linux/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/../../../include/c++/11.3.0
+ /workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/../../../include/c++/11.3.0/aarch64-poky-linux
+ /workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/../../../include/c++/11.3.0/backward
+ /workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/lib/clang/14.0.3/include
+ /workdir/poky2/sysroots/cortexa57-poky-linux/usr/include
+End of search list.
+Linking CXX executable cmTC_4a8d7
+/workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4a8d7.dir/link.txt --verbose=1
+/workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/bin/clang++ --target=aarch64-poky-linux --sysroot=/workdir/poky2/sysroots/cortexa57-poky-linux  -O2 -pipe -g -feliminate-unused-debug-types   -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  -Wl,-z,relro,-z,now -v CMakeFiles/cmTC_4a8d7.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_4a8d7 
+clang version 14.0.3 (https://github.com/llvm/llvm-project 1f9140064dfbfb0bbda8e51306ea51080b2f7aac)
+Target: aarch64-poky-linux
+Thread model: posix
+InstalledDir: /workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/bin
+Found candidate GCC installation: /workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0
+Selected GCC installation: /workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0
+Candidate multilib: .;@m64
+Selected multilib: .;@m64
+ "/workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-ld" --sysroot=/workdir/poky2/sysroots/cortexa57-poky-linux -pie -EL -z relro --hash-style=gnu --eh-frame-hdr -m aarch64linux -dynamic-linker /lib/ld-linux-aarch64.so.1 -o cmTC_4a8d7 /workdir/poky2/sysroots/cortexa57-poky-linux//usr/lib/Scrt1.o /workdir/poky2/sysroots/cortexa57-poky-linux//usr/lib/crti.o /workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/crtbeginS.o -L/workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/bin/../lib/aarch64-poky-linux -L/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0 -L/workdir/poky2/sysroots/cortexa57-poky-linux//lib -L/workdir/poky2/sysroots/cortexa57-poky-linux//usr/lib -O1 --hash-style=gnu --as-needed -z relro -z now CMakeFiles/cmTC_4a8d7.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/crtendS.o /workdir/poky2/sysroots/cortexa57-poky-linux//usr/lib/crtn.o
+gmake[1]: Leaving directory '/workdir/myproj/build/elinux/arm64/release/CMakeFiles/CMakeTmp'
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/../../../include/c++/11.3.0]
+    add: [/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/../../../include/c++/11.3.0/aarch64-poky-linux]
+    add: [/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/../../../include/c++/11.3.0/backward]
+    add: [/workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/lib/clang/14.0.3/include]
+    add: [/workdir/poky2/sysroots/cortexa57-poky-linux/usr/include]
+  end of search list found
+  collapse include dir [/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/../../../include/c++/11.3.0] ==> [/workdir/poky2/sysroots/cortexa57-poky-linux/usr/include/c++/11.3.0]
+  collapse include dir [/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/../../../include/c++/11.3.0/aarch64-poky-linux] ==> [/workdir/poky2/sysroots/cortexa57-poky-linux/usr/include/c++/11.3.0/aarch64-poky-linux]
+  collapse include dir [/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/../../../include/c++/11.3.0/backward] ==> [/workdir/poky2/sysroots/cortexa57-poky-linux/usr/include/c++/11.3.0/backward]
+  collapse include dir [/workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/lib/clang/14.0.3/include] ==> [/workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/lib/clang/14.0.3/include]
+  collapse include dir [/workdir/poky2/sysroots/cortexa57-poky-linux/usr/include] ==> [/workdir/poky2/sysroots/cortexa57-poky-linux/usr/include]
+  implicit include dirs: [/workdir/poky2/sysroots/cortexa57-poky-linux/usr/include/c++/11.3.0;/workdir/poky2/sysroots/cortexa57-poky-linux/usr/include/c++/11.3.0/aarch64-poky-linux;/workdir/poky2/sysroots/cortexa57-poky-linux/usr/include/c++/11.3.0/backward;/workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/lib/clang/14.0.3/include;/workdir/poky2/sysroots/cortexa57-poky-linux/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld\.lld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /workdir/myproj/build/elinux/arm64/release/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_4a8d7/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4a8d7.dir/build.make CMakeFiles/cmTC_4a8d7.dir/build]
+  ignore line: [gmake[1]: Entering directory '/workdir/myproj/build/elinux/arm64/release/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_4a8d7.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/bin/clang++ --target=aarch64-poky-linux --sysroot=/workdir/poky2/sysroots/cortexa57-poky-linux   -O2 -pipe -g -feliminate-unused-debug-types     -v -MD -MT CMakeFiles/cmTC_4a8d7.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_4a8d7.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_4a8d7.dir/CMakeCXXCompilerABI.cpp.o -c /workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [clang version 14.0.3 (https://github.com/llvm/llvm-project 1f9140064dfbfb0bbda8e51306ea51080b2f7aac)]
+  ignore line: [Target: aarch64-poky-linux]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/bin]
+  ignore line: [Found candidate GCC installation: /workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0]
+  ignore line: [Selected GCC installation: /workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  ignore line: [ (in-process)]
+  ignore line: [ "/workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/bin/clang-14" -cc1 -triple aarch64-poky-linux -emit-obj --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -fmath-errno -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu generic -target-feature +neon -target-feature +v8a -target-abi aapcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debug-info-kind=constructor -dwarf-version=5 -debugger-tuning=gdb -v -fcoverage-compilation-dir=/workdir/myproj/build/elinux/arm64/release/CMakeFiles/CMakeTmp -resource-dir /workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/lib/clang/14.0.3 -dependency-file CMakeFiles/cmTC_4a8d7.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_4a8d7.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /workdir/poky2/sysroots/cortexa57-poky-linux -internal-isystem /workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/../../../include/c++/11.3.0 -internal-isystem /workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/../../../include/c++/11.3.0/aarch64-poky-linux -internal-isystem /workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/../../../include/c++/11.3.0/backward -internal-isystem /workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/lib/clang/14.0.3/include -internal-isystem /workdir/poky2/sysroots/cortexa57-poky-linux/usr/local/include -internal-isystem /workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/../../../aarch64-poky-linux/include -internal-externc-isystem /workdir/poky2/sysroots/cortexa57-poky-linux/include -internal-externc-isystem /workdir/poky2/sysroots/cortexa57-poky-linux/usr/include -O2 -fdeprecated-macro -fdebug-compilation-dir=/workdir/myproj/build/elinux/arm64/release/CMakeFiles/CMakeTmp -ferror-limit 19 -fno-signed-char -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -vectorize-loops -vectorize-slp -target-feature +outline-atomics -faddrsig -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_4a8d7.dir/CMakeCXXCompilerABI.cpp.o -x c++ /workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [clang -cc1 version 14.0.3 based upon LLVM 14.0.3 default target x86_64-unknown-linux-gnu]
+  ignore line: [ignoring nonexistent directory "/workdir/poky2/sysroots/cortexa57-poky-linux/usr/local/include"]
+  ignore line: [ignoring nonexistent directory "/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/../../../aarch64-poky-linux/include"]
+  ignore line: [ignoring nonexistent directory "/workdir/poky2/sysroots/cortexa57-poky-linux/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/../../../include/c++/11.3.0]
+  ignore line: [ /workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/../../../include/c++/11.3.0/aarch64-poky-linux]
+  ignore line: [ /workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/../../../include/c++/11.3.0/backward]
+  ignore line: [ /workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/lib/clang/14.0.3/include]
+  ignore line: [ /workdir/poky2/sysroots/cortexa57-poky-linux/usr/include]
+  ignore line: [End of search list.]
+  ignore line: [Linking CXX executable cmTC_4a8d7]
+  ignore line: [/workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4a8d7.dir/link.txt --verbose=1]
+  ignore line: [/workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/bin/clang++ --target=aarch64-poky-linux --sysroot=/workdir/poky2/sysroots/cortexa57-poky-linux  -O2 -pipe -g -feliminate-unused-debug-types   -Wl -O1 -Wl --hash-style=gnu -Wl --as-needed  -Wl -z relro -z now -v CMakeFiles/cmTC_4a8d7.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_4a8d7 ]
+  ignore line: [clang version 14.0.3 (https://github.com/llvm/llvm-project 1f9140064dfbfb0bbda8e51306ea51080b2f7aac)]
+  ignore line: [Target: aarch64-poky-linux]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/bin]
+  ignore line: [Found candidate GCC installation: /workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0]
+  ignore line: [Selected GCC installation: /workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0]
+  ignore line: [Candidate multilib: .]
+  ignore line: [@m64]
+  ignore line: [Selected multilib: .]
+  ignore line: [@m64]
+  link line: [ "/workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-ld" --sysroot=/workdir/poky2/sysroots/cortexa57-poky-linux -pie -EL -z relro --hash-style=gnu --eh-frame-hdr -m aarch64linux -dynamic-linker /lib/ld-linux-aarch64.so.1 -o cmTC_4a8d7 /workdir/poky2/sysroots/cortexa57-poky-linux//usr/lib/Scrt1.o /workdir/poky2/sysroots/cortexa57-poky-linux//usr/lib/crti.o /workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/crtbeginS.o -L/workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/bin/../lib/aarch64-poky-linux -L/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0 -L/workdir/poky2/sysroots/cortexa57-poky-linux//lib -L/workdir/poky2/sysroots/cortexa57-poky-linux//usr/lib -O1 --hash-style=gnu --as-needed -z relro -z now CMakeFiles/cmTC_4a8d7.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/crtendS.o /workdir/poky2/sysroots/cortexa57-poky-linux//usr/lib/crtn.o]
+    arg [/workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/bin/aarch64-poky-linux/aarch64-poky-linux-ld] ==> ignore
+    arg [--sysroot=/workdir/poky2/sysroots/cortexa57-poky-linux] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-EL] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [aarch64linux] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib/ld-linux-aarch64.so.1] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_4a8d7] ==> ignore
+    arg [/workdir/poky2/sysroots/cortexa57-poky-linux//usr/lib/Scrt1.o] ==> obj [/workdir/poky2/sysroots/cortexa57-poky-linux//usr/lib/Scrt1.o]
+    arg [/workdir/poky2/sysroots/cortexa57-poky-linux//usr/lib/crti.o] ==> obj [/workdir/poky2/sysroots/cortexa57-poky-linux//usr/lib/crti.o]
+    arg [/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/crtbeginS.o] ==> obj [/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/crtbeginS.o]
+    arg [-L/workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/bin/../lib/aarch64-poky-linux] ==> dir [/workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/bin/../lib/aarch64-poky-linux]
+    arg [-L/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0] ==> dir [/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0]
+    arg [-L/workdir/poky2/sysroots/cortexa57-poky-linux//lib] ==> dir [/workdir/poky2/sysroots/cortexa57-poky-linux//lib]
+    arg [-L/workdir/poky2/sysroots/cortexa57-poky-linux//usr/lib] ==> dir [/workdir/poky2/sysroots/cortexa57-poky-linux//usr/lib]
+    arg [-O1] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-znow] ==> ignore
+    arg [CMakeFiles/cmTC_4a8d7.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [-lgcc] ==> lib [gcc]
+    arg [/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/crtendS.o] ==> obj [/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/crtendS.o]
+    arg [/workdir/poky2/sysroots/cortexa57-poky-linux//usr/lib/crtn.o] ==> obj [/workdir/poky2/sysroots/cortexa57-poky-linux//usr/lib/crtn.o]
+  collapse obj [/workdir/poky2/sysroots/cortexa57-poky-linux//usr/lib/Scrt1.o] ==> [/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/Scrt1.o]
+  collapse obj [/workdir/poky2/sysroots/cortexa57-poky-linux//usr/lib/crti.o] ==> [/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/crti.o]
+  collapse obj [/workdir/poky2/sysroots/cortexa57-poky-linux//usr/lib/crtn.o] ==> [/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/crtn.o]
+  collapse library dir [/workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/bin/../lib/aarch64-poky-linux] ==> [/workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/lib/aarch64-poky-linux]
+  collapse library dir [/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0] ==> [/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0]
+  collapse library dir [/workdir/poky2/sysroots/cortexa57-poky-linux//lib] ==> [/workdir/poky2/sysroots/cortexa57-poky-linux/lib]
+  collapse library dir [/workdir/poky2/sysroots/cortexa57-poky-linux//usr/lib] ==> [/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib]
+  implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+  implicit objs: [/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/Scrt1.o;/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/crti.o;/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/crtbeginS.o;/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0/crtendS.o;/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/crtn.o]
+  implicit dirs: [/workdir/poky2/sysroots/x86_64-pokysdk-linux/usr/lib/aarch64-poky-linux;/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib/aarch64-poky-linux/11.3.0;/workdir/poky2/sysroots/cortexa57-poky-linux/lib;/workdir/poky2/sysroots/cortexa57-poky-linux/usr/lib]
+  implicit fwks: []
+
+

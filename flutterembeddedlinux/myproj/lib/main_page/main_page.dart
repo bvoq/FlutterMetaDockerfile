@@ -46,7 +46,9 @@ class _MainPageState extends State<MainPage> {
                 const SizedBox(height: spacingBetweenElements),
                 loadedImage
                     ? Image.network(
-                        'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Wayland_Logo.svg/1920px-Wayland_Logo.svg.png')
+                        'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Wayland_Logo.svg/1920px-Wayland_Logo.svg.png',
+                        width: 640,
+                      )
                     : Container(),
               ],
             ),

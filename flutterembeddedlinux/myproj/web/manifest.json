@@ -1,11 +1,11 @@
 {
-    "name": "juiceflutterpoc",
-    "short_name": "juiceflutterpoc",
+    "name": "sirpinski",
+    "short_name": "sirpinski",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Zühlke CH Mobile Flutter project for juiceflutterpoc",
+    "description": "A new Flutter project.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

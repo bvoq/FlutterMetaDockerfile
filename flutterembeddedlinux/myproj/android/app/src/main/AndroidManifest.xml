@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.zuehlke.mobile.flutter.juiceflutterpoc">
+    package="com.example.sirpinski">
    <application
-        android:label="juiceflutterpoc"
+        android:label="sirpinski"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

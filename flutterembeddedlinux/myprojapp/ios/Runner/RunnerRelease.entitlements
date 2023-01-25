@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-  <!-- This is required because Flutter needs the push notification entitlement on IOS regardless if you actually use it or not. This issue has been open for a long time: https://github.com/flutter/flutter/issues/9984 -->
-	<key>aps-environment</key>
-	<string>development</string>
-</dict>
-</plist>
